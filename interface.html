@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es" >
+    <head>
+        <meta charset="UTF-8" >
+        <title>Aprendiendo jQuery</title>
+
+       
+        <!-- Trae la ruta local del fichero de jQuery (CTRL + U) en el explorador-->
+        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+        
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css"/>
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.structure.css"/>
+        <link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css"/>
+        
+       
+        <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script> 
+        <script type="text/javascript" src="js/06-interface.js"></script>
+         <style>
+            .elemento{
+                width: 250px;
+                height: 180px;
+                border: 4px solid blue;
+                background: lightblue;
+                margin: 20px;
+                float: left; 
+            }
+             .lista-seleccionable li{
+                width: 80%;
+                padding: 20px;
+                border: 1px solid #ccc;
+                list-style: none;
+                cursor: pointer;
+            }
+
+            ul .ui-selecting {background: blue;}
+            ul .ui-selected {background: greenyellow;}
+
+            #elemento-movido{
+                width: 100px;
+                height: 100px;
+                border: 4px dashed red;
+            }
+
+            #area{
+                width: 300px;
+                height: 300px;
+                border: 4px solid blue;
+            }
+            .elemento{
+                background: pink;
+                float: none;
+                display: none;
+                
+            }
+            .toggler { width: 500px; height: 200px; position: relative; }
+            #button { padding: .5em 1em; text-decoration: none; }
+            #effect { width: 240px; height: 170px; padding: 0.4em; position: relative; background: #fff; }
+            #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+       
+        </style>
+        
+    </head>
+    <body>
+        <h1>Aprendiendo jQuery  -  jQuery UI</h1>
+
+         <hr/>
+        <h3>Tooltip</h3>
+
+        <a href="#" title="Acceder a mis datos de esta web">Mis datos</a>
+        <a href="#" title="Logueate en esta web">Identificarse</a>
+        <a href="#" title="Ver toda mi familia">Familia</a>
+        <hr/>
+      
+        <h3>Cuadros de Dialogo</h3>
+        <button id="lanzar-popup">Lanzame</button>
+        <div id="popup" title="are you sure?" style="display:none">
+            <p>
+                Continua aprendiendo mucho de Js
+            </p>
+
+        </div>
+       
+        <hr/>
+         <h3>Panel de Tabs</h3>
+        <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Colombia</a></li>
+              <li><a href="#tabs-2">Bandera de Colombia</a></li>
+              <li><a href="#tabs-3">Escudo y Arbol de Colombia</a></li>
+            </ul>
+            <div id="tabs-1">
+              <p>Colombia, oficialmente República de Colombia, es un país soberano situado en la región noroccidental de América del Sur, que se constituye en un estado unitario, social y democrático de derecho cuya forma de gobierno es presidencialista. Es una república organizada políticamente en 32 departamentos descentralizados y el Distrito Capital de Bogotá, sede del Gobierno Nacional.</p>
+            </div>
+            <div id="tabs-2">
+              <p>La bandera de la República de Colombia es el pabellón que representa al país, y que, junto al escudo y el himno nacional, tiene la categoría de símbolo patrio. Consiste en un rectángulo dividido en tres franjas coloreadas con los antiguos colores primarios, ocupando la superior la mitad de este.</p>
+            </div>
+            <div id="tabs-3">
+              <p>El escudo de armas de la República de Colombia es el emblema heráldico que representa al país, y que junto a la bandera y el himno nacional, tiene la categoría de símbolo patrio.</p>
+            </div>
+          </div>
+  
+        <hr/>
+
+        <div class="toggler">
+            <div id="effect" class="ui-widget-content ui-corner-all">
+              <h3 class="ui-widget-header ui-corner-all">Colombia</h3>
+              <p>
+                El Himno nacional de la República de Colombia es la composición musical patriótica que representa al país y que, junto con la bandera y el escudo, tiene la categoría de símbolo patrio.
+                Oh gloria inmarcesible, oh jubilo inmortal.
+              </p>
+            </div>
+          </div>
+
+        <button id="button" class="ui-state-default ui-corner-all">Toggle Effect</button>
+         
+        <hr/>
+          
+
+        <h3>Calendario</h3>
+        <p>Date: <input type="text" id="calendario" /></p> 
+  
+        <hr/>
+
+        <button id="mostrar">Mostrar</button>
+        <br>
+        <div class="caja-efectos elemento"></div>
+        <br>
+        <div id="elemento-movido"><p>Drag me to my target</p></div>
+        <br>
+        <div id="area"><p>Drop here</p></div>
+        <br>
+
+        <ul class="lista-seleccionable">
+            <li>GTA 5</li>
+            <li>Need For SPeed</li>
+            <li>Crash Bandicoot</li>
+            <li>Super Mario</li>
+            <li>Fifa</li>
+        </ul>
+        
+        <div class="elemento">
+            Hola, soy un elemento de la web 1
+        </div>
+
+        <div class="elemento">
+            Hola, soy un elemento de la web 2
+        </div>
+
+        <div class="elemento">
+            Hola, soy un elemento de la web 3
+        </div> 
+
+        
+    </body>
+</html>
